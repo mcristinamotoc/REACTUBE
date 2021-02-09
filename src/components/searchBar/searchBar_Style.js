@@ -8,7 +8,6 @@ export default makeStyles((style) => ({
     padding: "1rem 1rem",
   },
   searchForm:{
-    
     display: 'flex',
     alignItems: 'center',
     height: '100%',

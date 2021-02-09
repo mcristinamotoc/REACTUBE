@@ -5,6 +5,7 @@ import VideoList from "./components/videoList/videoList";
 import VideoDetail from "./components/videoDetail/videoDetail";
 
 
+
 const App = () => {
   const [videos, setVideos] = useState([]);
   const [selectedVideos, setSelectedVideos] = useState(null);
@@ -13,7 +14,9 @@ const App = () => {
   The content of this method is the call to the youtube API and its later storage in the state.*/
 
   const handleSubmit = async (termFromSearchBar) => {
-    const {data: { items: videos }} = await youtube.get("/search", {
+    const {
+      data: { items: videos },
+    } = await youtube.get("/search", {
       params: {
         q: termFromSearchBar,
       },
@@ -21,22 +24,26 @@ const App = () => {
 
     setVideos(videos);
     console.log("Videos!!", videos);
-    
+
     setSelectedVideos(videos[0]);
-  }
-    
-    return (
+  };
+
+  return (
+    <div className="app">
       <Fragment>
         <SearchBar onFormSubmit={handleSubmit} />
-        <div>
-          <VideoDetail videoItem={selectedVideos} />
-        </div>
-        <div>
-          <VideoList handleVideoSelect={setSelectedVideos} videos={videos} />
+        <div className="app_container">
+          <div className="app__videoDetail">
+            <VideoDetail videoItem={selectedVideos} />
+          </div>
+          <div className="app__videoList">
+            <VideoList handleVideoSelect={setSelectedVideos} videos={videos} />
+          </div>
         </div>
       </Fragment>
-    );
-  };
+    </div>
+  );
+};
 
 
 export default App;

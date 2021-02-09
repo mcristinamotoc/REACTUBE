@@ -19,7 +19,7 @@ const SearchBar = ({ onFormSubmit }) => {
 
   return (
     <div className={classes.searchBar}>
-      <form onSubmit={handleSubmit} 
+      <div onSubmit={handleSubmit} 
       className={classes.searchForm}>
         <TextField
           className={classes.searchTextField}
@@ -28,13 +28,8 @@ const SearchBar = ({ onFormSubmit }) => {
           onChange={handleChange}
           onKeyPress={handleSubmit}
         />
-        <IconButton 
-        type="submit" 
-        onSubmit={handleChange} 
-        aria-label="search">
-          <SearchIcon />
-        </IconButton>
-      </form>
+        <SearchIcon />
+      </div>
     </div>
   );
 };
