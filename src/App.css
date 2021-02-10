@@ -1,0 +1,19 @@
+.app_container {
+    display: flex;
+}
+
+.app_videoList {
+    flex: 0.4;
+    background-color: #d4f76d;
+    padding: 2rem 1rem;
+    padding-bottom: 0;
+    margin-bottom: 1.5rem;
+}
+
+.app_videoDetail {
+    flex: 0.6;
+    background: #ff704d;
+    padding: 2rem 1rem;
+    padding-bottom: 0;
+    margin-bottom: 1.5rem;
+}

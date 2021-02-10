@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import IconButton from "@material-ui/core/IconButton";
 import SearchIcon from "@material-ui/icons/Search";
 import { TextField } from "@material-ui/core";
 import useStyles from "./searchBar_Style";
@@ -19,8 +18,7 @@ const SearchBar = ({ onFormSubmit }) => {
 
   return (
     <div className={classes.searchBar}>
-      <div onSubmit={handleSubmit} 
-      className={classes.searchForm}>
+      <div onSubmit={handleSubmit} className={classes.searchForm}>
         <TextField
           className={classes.searchTextField}
           label="Search"

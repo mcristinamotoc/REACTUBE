@@ -3,7 +3,7 @@ import youtube from "./api/youtube";
 import SearchBar from "./components/searchBar/searchBar";
 import VideoList from "./components/videoList/videoList";
 import VideoDetail from "./components/videoDetail/videoDetail";
-
+import "./App.css";
 
 
 const App = () => {
@@ -29,19 +29,19 @@ const App = () => {
   };
 
   return (
-    <div className="app">
+    
       <Fragment>
-        <SearchBar onFormSubmit={handleSubmit} />
+        <SearchBar onFormSubmit={handleSubmit} />  
         <div className="app_container">
-          <div className="app__videoDetail">
+          <div className="app_videoDetail">
             <VideoDetail videoItem={selectedVideos} />
           </div>
-          <div className="app__videoList">
+          <div className="app_videoList">
             <VideoList handleVideoSelect={setSelectedVideos} videos={videos} />
           </div>
         </div>
       </Fragment>
-    </div>
+   
   );
 };
 

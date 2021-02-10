@@ -12,7 +12,7 @@ const VideoList = ({ videos, handlevideoselect }) => {
   ));
 
   return (
-    <Grid container spacing={10}>
+    <Grid container spacing={1}>
       {renderedVideos}
     </Grid>
   );
