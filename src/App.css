@@ -3,7 +3,7 @@
 }
 
 .app_videoList {
-    flex: 0.7;
+    flex: 0.3;
     background-color: #d4f76d;
     padding: 2rem 1rem;
     padding-bottom: 0;
@@ -11,7 +11,7 @@
 }
 
 .app_videoDetail {
-    flex: 0.3;
+    flex: 0.7;
     background: #ff704d;
     padding: 2rem 1rem;
     padding-bottom: 0;
