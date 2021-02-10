@@ -37,7 +37,7 @@ const App = () => {
             <VideoDetail videoItem={selectedVideos} />
           </div>
           <div className="app_videoList">
-            <VideoList handleVideoSelect={setSelectedVideos} videos={videos} />
+            <VideoList onVideoSelect={setSelectedVideos} videos={videos} />
           </div>
         </div>
       </Fragment>

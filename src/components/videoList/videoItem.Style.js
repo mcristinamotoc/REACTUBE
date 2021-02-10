@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((style) => ({
-  videoitem: {
+  videoSelect: {
     flex: "1",
     alignItems: "center",
     marginRight: "1.5rem",
@@ -13,8 +13,8 @@ export default makeStyles((style) => ({
   img: {
     marginRight: "1rem",
     padding: "1rem 1rem 1rem 1rem",
-    width: "75%",
-    height: "75%",
+    width: "70%",
+    height: "70%",
   },
   videoText: {
     paddingLeft: "1rem",

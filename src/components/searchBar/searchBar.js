@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SearchIcon from "@material-ui/icons/Search";
 import { TextField } from "@material-ui/core";
-import useStyles from "./searchBar_Style";
+import useStyles from "./searchBar.Style";
 
 const SearchBar = ({ onFormSubmit }) => {
   const [termFromSearchBar, setSearchTerm] = useState("");

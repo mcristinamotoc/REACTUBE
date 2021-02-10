@@ -1,20 +1,22 @@
 import React from "react";
 import CardMedia from "@material-ui/core/CardMedia";
 import { Typography } from "@material-ui/core";
-import useStyles from "./videosStyle.js";
+import useStyles from "./videoItem.Style.js";
 
-const VideoItem = ({ video, handleVideoSelect }) => {
+const VideoItem = ({ video, onVideoSelect }) => {
   const classes = useStyles();
 
   return (
-    <div onClick={() => handleVideoSelect(video)} className={classes.videoitem}>
+    <div 
+    onClick={() => onVideoSelect(video)} 
+    className={classes.videoSelect}>
       <CardMedia className={classes.img}>
         <img
           src={video.snippet.thumbnails.medium.url}
           alt={video.snippet.description}
         />
       </CardMedia>
-      <Typography gutterBottom variant="body1" className={classes.videoText}>
+      <Typography gutterBottom className={classes.videoText}>
         <div>{video.snippet.title}</div>
       </Typography>
     </div>
